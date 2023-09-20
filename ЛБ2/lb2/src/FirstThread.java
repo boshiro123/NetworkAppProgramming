@@ -18,6 +18,7 @@ public class FirstThread implements Runnable {
         this.word=word;
         this.text=text;
     }
+
     public void run() {
         int count = 0;
         String[] words = text.split("\\s+");

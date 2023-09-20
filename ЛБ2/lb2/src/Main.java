@@ -23,9 +23,27 @@ public class Main {
                 System.out.println("Не корректный выбор");
                 System.exit(0);
         }
-        new FirstThread("The first", text, word); // создать поток
-        new SecondThread("The second", text);
-        new ThirdThread("The third", text);
+        final String text1 = text;
+        final String word1 =  word;
+        Tasks task1 = new Tasks();
+//        new FirstThread("The first", text, word); // создать поток
+//        new SecondThread("The second", text);
+//        new ThirdThread("The third", text);
+        Runnable runnable1 = ()->{
+            task1.method1(text1, word1,"Thread 1");
+        };
+        Runnable runnable2 = ()->{
+            task1.method2(text1,"Thread 2");
+        };
+        Runnable runnable3 = ()->{
+            task1.method3(text1,"Thread 3");
+        };
+        Thread thread1 = new Thread(runnable1);
+        Thread thread2= new Thread(runnable2);
+        Thread thread3 = new Thread(runnable3);
+        thread1.start();
+        thread2.start();
+        thread3.start();
         try {
 // ожидать завершения других потоков исполнения
             Thread.sleep(10000);
