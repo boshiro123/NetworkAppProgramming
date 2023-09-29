@@ -26,9 +26,6 @@ public class Main {
         final String text1 = text;
         final String word1 =  word;
         Tasks task1 = new Tasks();
-//        new FirstThread("The first", text, word); // создать поток
-//        new SecondThread("The second", text);
-//        new ThirdThread("The third", text);
         Runnable runnable1 = ()->{
             task1.method1(text1, word1,"Thread 1");
         };
