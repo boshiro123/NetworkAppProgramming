@@ -7,10 +7,10 @@ import java.net.Socket;
 public class MultiThreadServerMain {
     public static void main(String[] args) {
         try {
-            ServerSocket server = new ServerSocket(8071, 10, InetAddress.getLocalHost());
+            ServerSocket server = new ServerSocket(8072, 10, InetAddress.getLocalHost());
             System.out.println("initialized: " + server.getInetAddress()+","+server.getLocalPort());
             while (true) {
-                Socket socket = server.accept();//ожидание подключения клиента
+                Socket socket = server.accept();
                 System.out.println(socket.getInetAddress()+" connected"+","+socket.getPort());
                 //создание отдельного потока для обмена данными с соединившимся клиентом
                 ServerThread thread = new ServerThread(socket);

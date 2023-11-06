@@ -34,21 +34,6 @@ public class MultiClient2 {
             System.err.println("ошибка I/О потока" + e);
         } catch (InterruptedException e) {
             System.err.println("ошибка потока выполнения" + e);
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (socket != null) {
-                try {
-                    socket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }

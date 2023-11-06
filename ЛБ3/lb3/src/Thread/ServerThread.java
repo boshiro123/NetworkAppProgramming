@@ -53,23 +53,5 @@ class ServerThread extends Thread {
             // если клиент не отвечает, соединение с ним разрывается
             System.err.println("Disconnect");
         }
-        finally {
-            disconnect(); // уничтожение потока
-             }
-        }
-        public void disconnect() {
-            try {
-                if (os != null) {
-                    os.close();
-                }
-                if (is != null) {
-                    is.close();
-                }
-                System.out.println(addr.getHostName() + " disconnecting");
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                this.interrupt();
-            }
         }
     }
