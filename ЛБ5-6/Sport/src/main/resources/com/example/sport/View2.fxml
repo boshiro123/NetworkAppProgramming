@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sport.Contoller.Controller">
+   <children>
+      <AnchorPane fx:id="imageButtonHome" layoutX="124.0" layoutY="33.0" prefHeight="301.0" prefWidth="467.0" style="-fx-background-color: #fafafa; -fx-border-color: black;">
+         <children>
+            <TableView fx:id="Table" focusTraversable="false" layoutX="1.0" layoutY="2.0" prefHeight="299.0" prefWidth="467.0">
+               <columns>
+                  <TableColumn fx:id="FIOColumn" prefWidth="204.0" style="-fx-alignment: center;" text="ФИО" />
+                  <TableColumn fx:id="ageColumn" prefWidth="93.0" style="-fx-alignment: center;" text="Возраст" />
+                  <TableColumn fx:id="heightColumn" prefWidth="77.5" style="-fx-alignment: center;" text="Рост(см)" />
+                  <TableColumn fx:id="weightColumn" prefWidth="91.5" style="-fx-alignment: center;" text="Вес(кг)" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="Close_Button" focusTraversable="false" layoutX="6.0" layoutY="7.0" mnemonicParsing="false" onAction="#CloseWindow" prefHeight="26.0" prefWidth="32.0" text="&lt;–" />
+      <Button fx:id="BuyButton" focusTraversable="false" layoutX="305.0" layoutY="344.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="109.0" text="Удалить" />
+   </children>
+</AnchorPane>
